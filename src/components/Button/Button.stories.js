@@ -1,4 +1,3 @@
-// src/components/Button/Button.stories.js
 import React from 'react';
 import Button from './Button';
 
