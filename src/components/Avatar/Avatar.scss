@@ -1,0 +1,16 @@
+.avatar {
+    background-color: #EB3FC7;
+    border: none;
+    border-radius: 100px;
+    color: #002749;
+    font-family: "Barlow", sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    height: 35px;
+    letter-spacing: 6%;
+    width: 35px;
+
+    &.focus:focus {
+        border: 2px solid #002749;  
+      }
+}
