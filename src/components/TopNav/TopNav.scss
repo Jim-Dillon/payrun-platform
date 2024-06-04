@@ -1,0 +1,12 @@
+header {
+    background: linear-gradient(to bottom left, rgba(97, 21, 166, 1), rgba(3, 3, 18, 1));
+    height: 100px;
+    width: 100%;
+}
+
+.logo {
+
+    &:focus {
+        border: 2px solid white;
+    }
+}
