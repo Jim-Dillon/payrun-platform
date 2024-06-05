@@ -2,15 +2,20 @@ import { useState, useEffect, useRef } from 'react'
 import Button from '../Button/Button'
 import './StickyNav.scss'
 
-const StickyNav = () => {
+const StickyNav = ({ selectedCount }) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const [stickyOffset, setStickyOffset] = useState(0);
   const navRef = useRef(null)
   const placeholderRef = useRef(null);
   
-  const handleResize = () => {
-    setIsMobile(window.innerWidth <= 768)
-  }
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   useEffect(() => {
     if (navRef.current) {
@@ -34,12 +39,6 @@ const StickyNav = () => {
     };
   }, [stickyOffset]);
 
-
-  useEffect(() => {
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
   return (
     <>
       <div ref={placeholderRef} style={{ display: 'none', height: '50px' }}></div>
@@ -50,7 +49,7 @@ const StickyNav = () => {
                   <p className='totalAmount'>£450,000</p>
               </div>
               <Button
-                  label='Approve (30)'
+                  label={`Approve (${selectedCount})`}
                   variant='primary'
                   size={isMobile ? 'small' : ''}
               >

@@ -3,14 +3,22 @@ import StickyNav from './components/StickyNav/StickyNav';
 import DataTable from './components/Table/DataTable';
 import './components/Table/TableSection.scss'
 import { arrow } from './components/Table/Arrow'
+import { useState } from 'react';
+import { data } from './components/Table/PayrunData';
 
 
 
 const App = () => {
+    const [selectedRowKeys, setSelectedRowKeys] = useState(data.map(item => item.key));
+
+    const onSelectChange = (selectedKeys) => {
+        setSelectedRowKeys(selectedKeys);
+      };
+
     return (
         <>
             <TopNav />
-            <StickyNav />
+            <StickyNav selectedCount={selectedRowKeys.length} />
             <main>
                 <div className="tableSection">
                     <div className="invoiceTotalContainer">
@@ -19,7 +27,10 @@ const App = () => {
                         </div>
                         {arrow}
                     </div>
-                    <DataTable/>
+                    <DataTable
+                        selectedRowKeys={selectedRowKeys}
+                        onSelectChange={onSelectChange}
+                    />
                 </div>
             </main>
         </> 
