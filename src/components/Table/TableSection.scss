@@ -33,6 +33,12 @@
     color: $primary-text;
 }
 
+table {
+    td, th {
+        color: $primary-text !important;
+    }
+}
+
 thead tr th {
     background-color: white !important;
 }
