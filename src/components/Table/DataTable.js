@@ -22,7 +22,7 @@ const DataTable = ({ selectedRowKeys, onSelectChange }) => {
       dataIndex: 'select',
       key: 'select',
       fixed: 'left',
-      width: 50,
+      width: 20,
       render: (text, record) => (
         <Checkbox
           checked={selectedRowKeys.includes(record.key)}

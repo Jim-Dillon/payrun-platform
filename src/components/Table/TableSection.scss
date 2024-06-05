@@ -18,6 +18,12 @@
     justify-content: space-between;
     padding: 1.5rem 1rem 1.5rem 0;
 
+    svg {
+        @media only screen and (min-width: 1350px) {
+            display: none;
+        }
+    }
+
     @media only screen and (min-width: 500px) {
         padding: 2rem 2rem 2rem 0;
     }
@@ -32,6 +38,8 @@
 
     color: $primary-text;
 }
+
+
 
 table {
     td, th {
