@@ -4,7 +4,7 @@ export const columns = [
       dataIndex: 'supplierName',
       key: 'supplierName',
       fixed: 'left',
-      width: 90,
+      width: 80,
       status: "pending",
       excluded: false
     },
@@ -44,7 +44,7 @@ export const columns = [
       title: 'Amount',
       dataIndex: 'amount',
       key: 'amount',
-      width: 100,
+      width: 80,
       status: "pending",
       excluded: false
     },

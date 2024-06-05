@@ -22,14 +22,18 @@ const App = () => {
             <TopNav />
             <StickyNav 
                 selectedCount={selectedRowKeys.length} 
-                selectedAmount={calculateTotalAmount(selectedRowKeys)} />
+                selectedAmount={calculateTotalAmount(selectedRowKeys)} 
+            />
             <main>
                 <div className="tableSection">
                     <div className="invoiceTotalContainer">
                         <div className="invoiceTotal">
                             30 new invoices
                         </div>
-                        {arrow}
+                        <div className="invoiceTotalRight">
+                            <p>Scroll to view more</p>
+                            {arrow}
+                        </div>
                     </div>
                     <DataTable
                         onSelectChange={setSelectedRowKeys}

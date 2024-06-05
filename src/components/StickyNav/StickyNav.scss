@@ -26,8 +26,6 @@ nav {
     justify-content: space-between;
 
     button {
-        margin-top: 0.5rem;
-
         @media only screen and (min-width: 768px) {
             margin-top: 0px;
         }
@@ -38,8 +36,8 @@ nav {
     background-color: #F5F5F5;
     border-radius: $primary-br;
     display: flex;
-    gap: 1rem;
-    padding: .75rem .5rem;
+    gap: .5rem;
+    padding: .75rem;
 
 
     @media only screen and (min-width: 768px) {

@@ -50,7 +50,7 @@ const StickyNav = ({ selectedCount, selectedAmount }) => {
       <nav ref={navRef}>
           <div className="stickyNavContainer">
               <div className="amountTrackContainer">
-                  <p>Total</p>
+                  <p>Total Amount:</p>
                   <p className='totalAmount'>£{totalAmount.toFixed(2)}</p>
               </div>
               <Button

@@ -11,25 +11,29 @@
     @media only screen and (min-width: 768px) {
         padding: 0 0 2rem 3rem;
     }
+
+    @media only screen and (min-width: 1350px) {
+        padding: 0 3rem 3rem;
+    }
 }
 
 .invoiceTotalContainer {
     display: flex;
     justify-content: space-between;
-    padding: 1.5rem 1rem 1.5rem 0;
+    padding: 1.5rem 1rem 1rem 0;
 
-    svg {
+    svg, p {
         @media only screen and (min-width: 1350px) {
             display: none;
         }
     }
 
     @media only screen and (min-width: 500px) {
-        padding: 2rem 2rem 2rem 0;
+        padding: 2rem 2rem 1rem 0;
     }
 
     @media only screen and (min-width: 768px) {
-        padding: 2rem 3rem 2rem 0 ;
+        padding: 2rem 3rem 1rem 0 ;
     }
 }
 
@@ -39,6 +43,26 @@
     color: $primary-text;
 }
 
+.invoiceTotalRight {
+    color: #787373;
+    display: flex;
+    gap: 1rem;
+
+    p {
+        @include fineprint;
+        margin: 0;
+
+        @media only screen and (min-width: 500px) {
+            @include body-regular__mobile
+        }
+    }
+
+    svg {
+        @media only screen and (min-width: 500px) {
+            margin-top: 2px
+        }
+    }
+}
 
 
 table {
@@ -63,6 +87,10 @@ thead tr th {
         margin-right: 3rem !important;
         margin-top: 2rem !important;
     }
+}
+
+.ant-table-cell-fix-left-last {
+    padding-left: 0px !important;
 }
 
 .ant-pagination-item-active {

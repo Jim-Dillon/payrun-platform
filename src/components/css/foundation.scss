@@ -39,7 +39,7 @@ body {
 @mixin body-regular__desktop {
     font-family: $primary-font;
     font-size: 14px;
-    line-height: 19.6;
+    line-height: 19.6px;
 }
 
 @mixin body-bold__desktop {
@@ -79,14 +79,20 @@ body {
 
 @mixin body-regular__mobile {
     font-family: $primary-font;
-    font-size: 12px;
-    line-height: 16.8px;
+    font-size: 14px;
+    line-height: 19.6px;
 }
 
 @mixin body-bold__mobile {
     font-family: $primary-font;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
+    line-height: 19.6px;
+}
+
+@mixin fineprint {
+    font-family: $primary-font;
+    font-size: 12px;
     line-height: 16.8px;
 }
 
@@ -109,3 +115,16 @@ $button-focus: #B1D9FC;
 $avatar: #EB3FC7;
 
 $primary-br: 4px;
+
+$spacing-scale: (
+    1: 0px,
+    2: 2px,
+    3: 4px, 
+    4: 8px, 
+    5: 12px, 
+    6: 16px, 
+    7: 24px,
+    8: 32px,
+    9: 48px,
+    10: 64px
+    )
