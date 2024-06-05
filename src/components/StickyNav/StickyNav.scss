@@ -1,3 +1,5 @@
+@import '../css/foundation.scss';
+
 nav {
     box-shadow: 0px 2px 4px #00000020;
     padding: 0.5rem 1rem;
@@ -14,14 +16,18 @@ nav {
 .stickyNavContainer {
     display: flex;
     justify-content: space-between;
+
+    button {
+        margin-top: 0.5rem;
+    }
 }
 
 .amountTrackContainer {
     background-color: #F5F5F5;
-    border-radius: 4px;
+    border-radius: $primary-br;
     display: flex;
     gap: 1rem;
-    padding: 8px 6px;
+    padding: .75rem .5rem;
 
 
     @media only screen and (min-width: 768px) {
@@ -29,11 +35,11 @@ nav {
     }
 
     p {
-        font-size: 14px;
+        @include subheading-regular__mobile;
         margin: 0px;
 
         &.totalAmount {
-            font-weight: 600;
+            @include subheading-bold__mobile;
         }
     }
 }

@@ -1,5 +1,7 @@
+@import '../css/foundation.scss';
+
 header {
-    background: linear-gradient(to bottom left, rgba(97, 21, 166, 1), rgba(3, 3, 18, 1));
+    background: $header-gradient;
     width: 100%;
 
     a {
@@ -10,12 +12,11 @@ header {
         display: none;
 
         @media only screen and (min-width: 768px) {
+            @include heading-bold__desktop;
+
             color: white;
             display: initial;
-            font-family: "Barlow", sans-serif;
-            font-size: 22px;
-            font-weight: 600;
-            line-height: 33.6px;
+            font-family: $primary-font;
             margin: 0;
         }
     }
@@ -50,5 +51,5 @@ header {
 }
 
 .signOutButton {
-    padding-top: 0.4rem;
+    margin-top: 5px;
 }

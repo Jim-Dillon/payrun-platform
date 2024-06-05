@@ -1,18 +1,19 @@
+@import '../css/foundation.scss';
+
 .avatar {
-    background-color: #EB3FC7;
-    border: 2px solid #EB3FC7;
+    background-color: $avatar;
+    border: 2px solid $avatar;
     border-radius: 100px;
-    color: #002749;
-    font-family: "Barlow", sans-serif;
+    color: $primary-text;
+    font-family: $primary-font;
     font-size: 12px;
     font-weight: bold;
     height: 35px;
-    letter-spacing: 6%;
     width: 35px;
 
     
 
     &.focus:focus {
-        border: 2px solid #002749;  
+        border: 2px solid $primary-text;  
       }
 }

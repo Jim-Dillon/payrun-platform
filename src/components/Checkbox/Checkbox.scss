@@ -1,8 +1,10 @@
+@import '../css/foundation.scss';
+
 .checkbox {
     display: flex;
     align-items: center;
     cursor: pointer;
-    font-family: "Barlow", sans-serif;
+    font-family: $primary-font;
   
     .checkbox-input {
       display: none;
@@ -11,7 +13,7 @@
     .checkbox-custom {
       width: 24px;
       height: 24px;
-      border: 2px solid #002749;
+      border: 2px solid $primary-text;
       margin-right: 8px;
       position: relative;
       display: flex;
@@ -19,7 +21,7 @@
       justify-content: center;
   
       &.selected {
-        background-color: #002749;
+        background-color: $primary-text;
         &:after {
           content: '✔';
           color: white;
