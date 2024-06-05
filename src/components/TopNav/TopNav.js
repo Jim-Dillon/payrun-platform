@@ -1,7 +1,7 @@
 import './TopNav.scss'
 import { logo } from './Logo'
 import { signOutButton } from './SignOutButton'
-import Avatar from '../Avatar'
+import Avatar from '../Avatar/Avatar'
 
 const TopNav = () => {
   return (
@@ -12,7 +12,10 @@ const TopNav = () => {
             </a>
             <div className="navRight">
                 <div className="navProfile">
-                    {/* <Avatar></Avatar> */}
+                    <Avatar 
+                        label="TR"  
+                        onClick={() => console.log('Avatar clicked')} 
+                    />
                     <p>Hi Tony</p>
                 </div>
                 <a href="/">

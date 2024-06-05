@@ -13,7 +13,8 @@ header {
             color: white;
             display: initial;
             font-family: "Barlow", sans-serif;
-            font-size: 24px;
+            font-size: 22px;
+            font-weight: 600;
             line-height: 33.6px;
             margin: 0;
         }
@@ -40,9 +41,14 @@ header {
 
 .navRight {
     display: flex;
-    gap: 2rem;
+    gap: 1.2rem;
 }
 
 .navProfile {
-     
+    display: flex;
+    gap: 12px;
+}
+
+.signOutButton {
+    padding-top: 0.4rem;
 }

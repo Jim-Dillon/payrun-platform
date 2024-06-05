@@ -1,11 +1,13 @@
-import Button from './components/Button/Button'
 import TopNav from './components/TopNav/TopNav';
+import StickyNav from './components/StickyNav/StickyNav';
 
 const App = () => {
     return (
-        <TopNav></TopNav>
+        <>
+            <TopNav />
+            <StickyNav />
+        </> 
     )
-    
 }
 
 export default App;
