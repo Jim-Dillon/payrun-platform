@@ -2,9 +2,49 @@
 
 .tableSection {
     background-color: #FAFAFA;
-    padding: 1rem 0 1rem 1rem;
+    padding: 0 0 1rem 1rem;
+
+    @media only screen and (min-width: 500px) {
+        padding: 0 0 2rem 2rem;
+    }
+
+    @media only screen and (min-width: 768px) {
+        padding: 0 0 2rem 3rem;
+    }
+}
+
+.invoiceTotalContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 1rem 1.5rem 0;
+
+    @media only screen and (min-width: 500px) {
+        padding: 2rem 1 2rem 0;
+    }
+
+    @media only screen and (min-width: 768px) {
+        padding: 2.5rem 1 2.5rem 0;
+    }
+}
+
+.invoiceTotal {
+    @include subheading-bold__mobile;
+
+    color: $primary-text;
 }
 
 thead tr th {
     background-color: white !important;
+}
+
+.ant-pagination {
+    margin-right: 1rem !important;
+}
+
+.ant-pagination-item-active {
+    border-color: $primary-text !important;
+}
+
+.ant-pagination-item a {
+    color: $primary-text !important;
 }
