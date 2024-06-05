@@ -1,14 +1,20 @@
+import { useState } from 'react';
 import { Table } from 'antd';
 import { columns as initialColumns, data } from './PayrunData';
 import Checkbox from '../Checkbox/Checkbox';
 
-const DataTable = ({ selectedRowKeys, onSelectChange }) => {
+const DataTable = ({ onSelectChange }) => {
+  const [selectedRowKeys, setSelectedRowKeys] = useState([]);
+
   const onRowSelectionChange = (selectedKeys) => {
+    setSelectedRowKeys(selectedKeys);
     onSelectChange(selectedKeys);
   };
 
   const onSelectAllChange = (e) => {
-    onSelectChange(e.target.checked ? data.map(item => item.key) : []);
+    const keys = e.target.checked ? data.map(item => item.key) : [];
+    setSelectedRowKeys(keys);
+    onSelectChange(keys);
   };
 
   const columns = [
@@ -22,7 +28,7 @@ const DataTable = ({ selectedRowKeys, onSelectChange }) => {
       dataIndex: 'select',
       key: 'select',
       fixed: 'left',
-      width: 20,
+      width: 5,
       render: (text, record) => (
         <Checkbox
           checked={selectedRowKeys.includes(record.key)}
@@ -30,7 +36,8 @@ const DataTable = ({ selectedRowKeys, onSelectChange }) => {
             const newSelectedRowKeys = selectedRowKeys.includes(record.key)
               ? selectedRowKeys.filter(key => key !== record.key)
               : [...selectedRowKeys, record.key];
-            onSelectChange(newSelectedRowKeys);
+            setSelectedRowKeys(newSelectedRowKeys);
+            onRowSelectionChange(newSelectedRowKeys);
           }}
         />
       ),

@@ -9,16 +9,20 @@ import { data } from './components/Table/PayrunData';
 
 
 const App = () => {
-    const [selectedRowKeys, setSelectedRowKeys] = useState(data.map(item => item.key));
+    const [selectedRowKeys, setSelectedRowKeys] = useState([]);
 
-    const onSelectChange = (selectedKeys) => {
-        setSelectedRowKeys(selectedKeys);
+    const calculateTotalAmount = (selectedKeys) => {
+        const selectedRows = data.filter(item => selectedKeys.includes(item.key));
+        const total = selectedRows.reduce((acc, curr) => acc + parseFloat(curr.amount), 0);
+        return total;
       };
 
     return (
         <>
             <TopNav />
-            <StickyNav selectedCount={selectedRowKeys.length} />
+            <StickyNav 
+                selectedCount={selectedRowKeys.length} 
+                selectedAmount={calculateTotalAmount(selectedRowKeys)} />
             <main>
                 <div className="tableSection">
                     <div className="invoiceTotalContainer">
@@ -28,8 +32,7 @@ const App = () => {
                         {arrow}
                     </div>
                     <DataTable
-                        selectedRowKeys={selectedRowKeys}
-                        onSelectChange={onSelectChange}
+                        onSelectChange={setSelectedRowKeys}
                     />
                 </div>
             </main>
