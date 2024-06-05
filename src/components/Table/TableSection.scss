@@ -19,11 +19,11 @@
     padding: 1.5rem 1rem 1.5rem 0;
 
     @media only screen and (min-width: 500px) {
-        padding: 2rem 1 2rem 0;
+        padding: 2rem 2rem 2rem 0;
     }
 
     @media only screen and (min-width: 768px) {
-        padding: 2.5rem 1 2.5rem 0;
+        padding: 2rem 3rem 2rem 0 ;
     }
 }
 
@@ -39,6 +39,16 @@ thead tr th {
 
 .ant-pagination {
     margin-right: 1rem !important;
+
+    @media only screen and (min-width: 500px) {
+        margin-right: 2rem !important;
+        margin-top: 1.5rem !important;
+    }
+
+    @media only screen and (min-width: 768px) {
+        margin-right: 3rem !important;
+        margin-top: 2rem !important;
+    }
 }
 
 .ant-pagination-item-active {
