@@ -42,11 +42,11 @@ body {
     line-height: 19.6;
 }
 
-@mixin body-regular__desktop {
+@mixin body-bold__desktop {
     font-family: $primary-font;
     font-size: 14px;
     font-weight: 600;
-    line-height: 28px;
+    line-height: 19.6px;
 }
 
 // Mobile
@@ -107,6 +107,5 @@ $button-active: #006CB6;
 $button-focus: #B1D9FC;
 
 $avatar: #EB3FC7;
-
 
 $primary-br: 4px;

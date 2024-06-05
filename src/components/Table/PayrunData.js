@@ -4,7 +4,7 @@ export const columns = [
       dataIndex: 'supplierName',
       key: 'supplierName',
       fixed: 'left',
-      width: 100,
+      width: 110,
       status: "pending",
       excluded: false
     },
@@ -12,7 +12,7 @@ export const columns = [
       title: 'Invoice Ref #',
       dataIndex: 'invoiceRef',
       key: 'invoiceRef',
-      width: 150,
+      width: 100,
       status: "pending",
       excluded: false
     },
@@ -20,7 +20,7 @@ export const columns = [
       title: 'Supplier Ref #',
       dataIndex: 'supplierRef',
       key: 'supplierRef',
-      width: 150,
+      width: 100,
       status: "pending",
       excluded: false
     },
@@ -28,7 +28,7 @@ export const columns = [
       title: 'Creation Date',
       dataIndex: 'creationDate',
       key: 'creationDate',
-      width: 150,
+      width: 130,
       status: "pending",
       excluded: false
     },
@@ -36,7 +36,7 @@ export const columns = [
       title: 'Due Date',
       dataIndex: 'dueDate',
       key: 'dueDate',
-      width: 150,
+      width: 130,
       status: "pending",
       excluded: false
     },
@@ -44,7 +44,7 @@ export const columns = [
       title: 'Amount',
       dataIndex: 'amount',
       key: 'amount',
-      width: 150,
+      width: 100,
       status: "pending",
       excluded: false
     },

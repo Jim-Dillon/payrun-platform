@@ -27,7 +27,7 @@ const DataTable = () => {
           dataIndex: 'select',
           key: 'select',
           fixed: 'left',
-          width: 50,
+          width: 40,
           render: (text, record) => (
             <input
               type="checkbox"
