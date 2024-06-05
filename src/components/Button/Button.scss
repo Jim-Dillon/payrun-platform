@@ -1,10 +1,12 @@
+@import '../css/foundation.scss';
+
 .button {
     background-color: #0098FF;
     border: none;
     border-radius: 4px;
     color: white;
     cursor: pointer;
-    font-family: "Barlow", sans-serif;
+    font-family: $primary-font;
     font-size: 16px;
     font-weight: 600;
     padding: 10px 12px;
@@ -34,8 +36,7 @@
     }
   
     &.small {
-      font-size: 12px;
-      line-height: 16px;
+      @include body-bold__mobile;
       height: 32px;
       padding: 8px 12px;
     }

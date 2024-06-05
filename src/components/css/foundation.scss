@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+// FONT FAMILY
+
+$primary-font: "Barlow", sans-serif;
+
+
+// HEADING STYLES
+
+// Desktop
+
+@mixin heading-regular__desktop {
+    font-size: 24px;
+    line-height: 33.6px;
+}
+
+@mixin heading-bold__desktop {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 33.6px;
+}
+
+@mixin subheading-regular__desktop {
+    font-size: 20px;
+    line-height: 28px;
+}
+
+@mixin subheading-bold__desktop {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+}
+
+@mixin body-regular__desktop {
+    font-size: 14px;
+    line-height: 19.6;
+}
+
+@mixin body-regular__desktop {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 28px;
+}
+
+// Mobile
+
+@mixin heading-regular__mobile {
+    font-size: 20px;
+    line-height: 28px;
+}
+
+@mixin heading-bold__mobile {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+}
+
+@mixin subheading-regular__mobile {
+    font-size: 16px;
+    line-height: 22px;
+}
+
+@mixin subheading-bold__mobile {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+}
+
+@mixin body-regular__mobile {
+    font-size: 12px;
+    line-height: 16.8px;
+}
+
+@mixin body-bold__mobile {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16.8px;
+}
+
+
+// COLOURS
+
+
+$primary-text: #002749;
+
+$header-gradient: linear-gradient(to bottom left, rgba(97, 21, 166, 1), rgba(3, 3, 18, 1));
+
+$button-primary: #0098FF;
+$button-hover: #0082DA;
+$button-active: #006CB6;
+$button-focus: #B1D9FC;
+
+$avatar: #EB3FC7;

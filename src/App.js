@@ -8,7 +8,11 @@ const App = () => {
         <>
             <TopNav />
             <StickyNav />
-            <DataTable/>
+            <main>
+                <div className="tableSection">
+                    <DataTable/>
+                </div>
+            </main>
         </> 
     )
 }
