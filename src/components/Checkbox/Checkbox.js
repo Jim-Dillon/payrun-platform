@@ -9,8 +9,11 @@ const Checkbox = ({ label, checked, onChange }) => {
         onChange={onChange}
         className="checkbox-input"
       />
-      <span className={`checkbox-custom ${checked ? 'selected' : 'unselected'}`}></span>
-      <span className="checkbox-label">{label}</span>
+      <span 
+        className={`checkbox-custom ${checked ? 'selected' : 'unselected'}`}
+        tabIndex={0}>
+        </span>
+      {label && <span className="checkbox-label">{label}</span>}
     </label>
   );
 };

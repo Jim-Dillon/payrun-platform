@@ -1,40 +1,47 @@
 @import '../css/foundation.scss';
 
 .checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-family: $primary-font;
+
+  .checkbox-input {
+    display: none;
+  }
+
+  .checkbox-custom {
+    width: 24px;
+    height: 24px;
+    border: 2px solid $primary-text;
+    margin-right: 8px;
+    position: relative;
     display: flex;
     align-items: center;
-    cursor: pointer;
-    font-family: $primary-font;
-  
-    .checkbox-input {
-      display: none;
-    }
-  
-    .checkbox-custom {
-      width: 24px;
-      height: 24px;
-      border: 2px solid $primary-text;
-      margin-right: 8px;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-  
-      &.selected {
-        background-color: $primary-text;
-        &:after {
-          content: '✔';
-          color: white;
-          font-size: 16px;
-        }
-      }
-  
-      &.unselected {
-        background-color: white;
+    justify-content: center;
+
+    &.selected {
+      background-color: $primary-text;
+
+      /* Remove focus styles here */
+
+      &:after {
+        content: '✔';
+        color: white;
+        font-size: 16px;
       }
     }
-  
-    .checkbox-label {
-      font-size: 16px;
+
+    &.unselected {
+      background-color: white;
     }
   }
+
+  .checkbox-label {
+    font-size: 16px;
+  }
+
+  .checkbox-custom:focus {
+    outline: 2px solid blue;
+  }
+}
