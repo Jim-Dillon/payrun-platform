@@ -1,15 +1,5 @@
 export const columns = [
     {
-      title: 'Select',
-      dataIndex: 'select',
-      key: 'select',
-      fixed: 'left',
-      width: 60,
-      render: (text, record) => (
-        <input type="checkbox" />
-      ),
-    },
-    {
       title: 'Supplier Name',
       dataIndex: 'supplierName',
       key: 'supplierName',
