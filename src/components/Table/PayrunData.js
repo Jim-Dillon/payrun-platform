@@ -67,7 +67,7 @@ export const columns = [
       supplierRef: 'SR002',
       creationDate: '2024-05-02',
       dueDate: '2024-06-20',
-      amount: '2000.00',
+      amount: '20000.00',
     },
     {
         key: '3',

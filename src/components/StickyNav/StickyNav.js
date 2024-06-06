@@ -3,15 +3,15 @@ import Button from '../Button/Button'
 import './StickyNav.scss'
 
 const StickyNav = ({ selectedCount, selectedAmount }) => {
-  const [totalAmount, setTotalAmount] = useState(0);
+  // const [totalAmount, setTotalAmount] = useState(0);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const [stickyOffset, setStickyOffset] = useState(0);
   const navRef = useRef(null)
   const placeholderRef = useRef(null);
 
-  useEffect(() => {
-    setTotalAmount(selectedAmount);
-  }, [selectedAmount]);
+  // useEffect(() => {
+  //   setTotalAmount(selectedAmount);
+  // }, [selectedAmount]);
   
   useEffect(() => {
     const handleResize = () => {
@@ -51,7 +51,7 @@ const StickyNav = ({ selectedCount, selectedAmount }) => {
           <div className="stickyNavContainer">
               <div className="amountTrackContainer">
                   <p>Total Amount:</p>
-                  <p className='totalAmount'>£{totalAmount.toFixed(2)}</p>
+                  <p className='totalAmount'>£{selectedAmount.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>
               </div>
               <Button
                   label={`Approve (${selectedCount})`}

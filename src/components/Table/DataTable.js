@@ -47,7 +47,14 @@ const DataTable = ({ onSelectChange }) => {
         />
       ),
     },
-    ...initialColumns,
+    ...initialColumns.map(column => 
+      column.dataIndex === 'amount' 
+        ? { 
+            ...column, 
+            render: (text) => `£${parseFloat(text).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}` 
+          } 
+        : column
+    ),
   ];
 
   return (
