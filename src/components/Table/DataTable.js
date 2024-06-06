@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Table } from 'antd';
 import { columns as initialColumns, data } from './PayrunData';
-// import Checkbox from '../Checkbox/Checkbox';
 
 const DataTable = ({ onSelectChange }) => {
   const [selectedRowKeys, setSelectedRowKeys] = useState(data.map(item => item.key));
@@ -30,7 +29,6 @@ const DataTable = ({ onSelectChange }) => {
             type="checkbox"
             checked={selectedRowKeys.length === data.length}
             onChange={onSelectAllChange}
-            className="checkbox-input"
             aria-label="Checkbox"
           />
         </label>
@@ -40,7 +38,7 @@ const DataTable = ({ onSelectChange }) => {
       fixed: 'left',
       width: 0,
       render: (text, record) => (
-        <label className="checkbox">
+        <label>
           <input
             type="checkbox"
             checked={selectedRowKeys.includes(record.key)}
@@ -51,7 +49,6 @@ const DataTable = ({ onSelectChange }) => {
               setSelectedRowKeys(newSelectedRowKeys);
               onRowSelectionChange(newSelectedRowKeys);
             }}
-            className="checkbox-input"
             aria-label="Checkbox"
           />
         </label>
