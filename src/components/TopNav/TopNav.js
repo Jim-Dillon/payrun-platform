@@ -2,8 +2,13 @@ import './TopNav.scss'
 import { logo } from './Logo'
 import { signOutButton } from './SignOutButton'
 import Avatar from '../Avatar/Avatar'
+import { Tooltip } from 'antd';
+
 
 const TopNav = () => {
+
+    const toolTipColour = '#535151'
+
   return (
     <header>
         <div className="navContainer">
@@ -18,12 +23,13 @@ const TopNav = () => {
                     />
                     <p>Hi Tony</p>
                 </div>
-                <a href="/">
-                    {signOutButton}
-                </a>
+                <Tooltip title="Sign out" color={toolTipColour}>
+                    <a href="/">
+                        {signOutButton}
+                    </a>
+                </Tooltip>
             </div>
         </div>
-
     </header>
   )
 }
