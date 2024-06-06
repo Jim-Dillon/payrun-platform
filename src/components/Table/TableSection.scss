@@ -2,25 +2,26 @@
 
 .tableSection {
     background-color: #FAFAFA;
-    padding: 0 0 1rem 1rem;
+    padding: map-get($spacing-scale, 1) map-get($spacing-scale, 1) map-get($spacing-scale, 6) map-get($spacing-scale, 6);
 
     @media only screen and (min-width: 500px) {
-        padding: 0 0 2rem 2rem;
+        padding: map-get($spacing-scale, 1) map-get($spacing-scale, 1) map-get($spacing-scale, 8) map-get($spacing-scale, 8);
     }
 
     @media only screen and (min-width: 768px) {
-        padding: 0 0 2rem 3rem;
+        padding: map-get($spacing-scale, 1) map-get($spacing-scale, 1) map-get($spacing-scale, 8) map-get($spacing-scale, 9);
     }
 
     @media only screen and (min-width: 1350px) {
-        padding: 0 3rem 3rem;
+        padding: map-get($spacing-scale, 1) map-get($spacing-scale, 9) map-get($spacing-scale, 9);
     }
 }
 
 .invoiceTotalContainer {
     display: flex;
     justify-content: space-between;
-    padding: 1.5rem 1rem 1rem 0;
+    padding: map-get($spacing-scale, 7) map-get($spacing-scale, 6) map-get($spacing-scale, 6) map-get($spacing-scale, 1);
+   
 
     svg, p {
         @media only screen and (min-width: 1350px) {
@@ -29,11 +30,11 @@
     }
 
     @media only screen and (min-width: 500px) {
-        padding: 2rem 2rem 1rem 0;
+        padding: map-get($spacing-scale, 8) map-get($spacing-scale, 8) map-get($spacing-scale, 6) map-get($spacing-scale, 1);
     }
 
     @media only screen and (min-width: 768px) {
-        padding: 2rem 3rem 1rem 0 ;
+        padding: map-get($spacing-scale, 8) map-get($spacing-scale, 8) map-get($spacing-scale, 6) map-get($spacing-scale, 1);
     }
 }
 
@@ -46,11 +47,11 @@
 .invoiceTotalRight {
     color: #787373;
     display: flex;
-    gap: 1rem;
+    gap: map-get($spacing-scale, 6);
 
     p {
         @include fineprint;
-        margin: 0;
+        margin: map-get($spacing-scale, 1);
 
         @media only screen and (min-width: 500px) {
             @include body-regular__mobile
@@ -76,21 +77,21 @@ thead tr th {
 }
 
 .ant-pagination {
-    margin-right: 1rem !important;
+    margin-right: map-get($spacing-scale, 6) !important;
 
     @media only screen and (min-width: 500px) {
-        margin-right: 2rem !important;
-        margin-top: 1.5rem !important;
+        margin-right: map-get($spacing-scale, 6) !important;
+        margin-top: map-get($spacing-scale, 7) !important;
     }
 
     @media only screen and (min-width: 768px) {
-        margin-right: 3rem !important;
-        margin-top: 2rem !important;
+        margin-right: map-get($spacing-scale, 9) !important;
+        margin-top: map-get($spacing-scale, 8) !important;
     }
 }
 
 .ant-table-cell-fix-left-last {
-    padding-left: 0px !important;
+    padding-left: map-get($spacing-scale, 1) !important;
 }
 
 .ant-pagination-item-active {

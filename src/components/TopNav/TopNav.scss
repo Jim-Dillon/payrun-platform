@@ -17,7 +17,7 @@ header {
             color: white;
             display: initial;
             font-family: $primary-font;
-            padding-top: .5rem;
+            padding-top: map-get($spacing-scale, 4);
             margin: 0;
         }
     }
@@ -26,7 +26,7 @@ header {
 .navContainer {
     display: flex;
     justify-content: space-between;
-    padding: 1rem 1rem;
+    padding: map-get($spacing-scale, 6)
 }
 
 .logo {
@@ -43,7 +43,7 @@ header {
 
 .navProfile {
     display: flex;
-    gap: 12px;
+    gap: map-get($spacing-scale, 5);
 }
 
 .signOutButton {

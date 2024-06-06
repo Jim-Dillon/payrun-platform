@@ -3,14 +3,14 @@
 nav {
     background-color: white;
     box-shadow: 0px 2px 4px #00000020;
-    padding: 0.5rem 1rem;
+    padding: map-get($spacing-scale, 4) map-get($spacing-scale, 6);
 
     @media only screen and (min-width: 500px) {
-        padding: 1rem 2rem;
+        padding: map-get($spacing-scale, 6) map-get($spacing-scale, 8);
     }
 
     @media only screen and (min-width: 768px) {
-        padding: 1rem 3rem;
+        padding: map-get($spacing-scale, 6) map-get($spacing-scale, 9);
     }
 }
 
@@ -27,7 +27,7 @@ nav {
 
     button {
         @media only screen and (min-width: 768px) {
-            margin-top: 0px;
+            margin-top: map-get($spacing-scale, 1);
         }
     }
 }
@@ -36,17 +36,17 @@ nav {
     background-color: #F5F5F5;
     border-radius: $primary-br;
     display: flex;
-    gap: .5rem;
-    padding: .75rem;
+    gap: map-get($spacing-scale, 4);
+    padding: map-get($spacing-scale, 5);
 
 
     @media only screen and (min-width: 768px) {
-        padding: 1rem
+        padding: map-get($spacing-scale, 6)
     }
 
     p {
         @include subheading-regular__mobile;
-        margin: 0px;
+        margin: map-get($spacing-scale, 1);
 
         &.totalAmount {
             @include subheading-bold__mobile;
