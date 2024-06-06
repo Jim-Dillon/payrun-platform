@@ -14,6 +14,20 @@
     &.primary {
       background-color: #0098FF;
       color: white;
+
+      &:hover {
+        background-color: #0082DA;
+      }
+
+      &:active {
+        background-color: #006CB6;
+      }
+
+      &:focus {
+        border: 1px solid #0082DA;  
+        color: black;
+        background-color: #B1D9FC;
+      }
     }
   
     &.hover:hover {

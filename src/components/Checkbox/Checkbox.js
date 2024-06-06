@@ -8,6 +8,7 @@ const Checkbox = ({ label, checked, onChange }) => {
         checked={checked}
         onChange={onChange}
         className="checkbox-input"
+        aria-label="Checkbox"
       />
       {label && <span className="checkbox-label">{label}</span>}
     </label>
