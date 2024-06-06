@@ -10,7 +10,6 @@ import { data } from './components/Table/PayrunData';
 
 const App = () => {
     const [selectedRowKeys, setSelectedRowKeys] = useState(data.map(item => item.key));
-    console.log(selectedRowKeys);
     const [totalAmount, setTotalAmount] = useState(0);
 
     useEffect(() => {
