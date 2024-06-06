@@ -1,10 +1,15 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Table } from 'antd';
 import { columns as initialColumns, data } from './PayrunData';
 import Checkbox from '../Checkbox/Checkbox';
 
 const DataTable = ({ onSelectChange }) => {
-  const [selectedRowKeys, setSelectedRowKeys] = useState([]);
+  const [selectedRowKeys, setSelectedRowKeys] = useState(data.map(item => item.key));
+
+  useEffect(() => {
+    // Notify parent component about initial selection
+    onSelectChange(selectedRowKeys);
+  }, []);
 
   const onRowSelectionChange = (selectedKeys) => {
     setSelectedRowKeys(selectedKeys);

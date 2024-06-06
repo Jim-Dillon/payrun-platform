@@ -3,18 +3,29 @@ import StickyNav from './components/StickyNav/StickyNav';
 import DataTable from './components/Table/DataTable';
 import './components/Table/TableSection.scss'
 import { arrow } from './components/Table/Arrow'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { data } from './components/Table/PayrunData';
 
 
 
 const App = () => {
-    const [selectedRowKeys, setSelectedRowKeys] = useState([]);
+    const [selectedRowKeys, setSelectedRowKeys] = useState(data.map(item => item.key));
+    const [totalAmount, setTotalAmount] = useState(0);
 
-    const calculateTotalAmount = (selectedKeys) => {
+    useEffect(() => {
+        // Initial calculation of total amount
+        setTotalAmount(calculateTotalAmount(selectedRowKeys));
+      }, []);
+
+      const calculateTotalAmount = (selectedKeys) => {
         const selectedRows = data.filter(item => selectedKeys.includes(item.key));
-        const total = selectedRows.reduce((acc, curr) => acc + parseFloat(curr.amount), 0);
+        const total = selectedRows.reduce((acc, curr) => acc + parseFloat(curr.amount.replace(/,/g, '')), 0);
         return total;
+      };
+
+      const handleSelectChange = (selectedKeys) => {
+        setSelectedRowKeys(selectedKeys);
+        setTotalAmount(calculateTotalAmount(selectedKeys));
       };
 
     return (
@@ -22,7 +33,7 @@ const App = () => {
             <TopNav />
             <StickyNav 
                 selectedCount={selectedRowKeys.length} 
-                selectedAmount={calculateTotalAmount(selectedRowKeys)} 
+                selectedAmount={totalAmount} 
             />
             <main>
                 <div className="tableSection">
@@ -36,7 +47,7 @@ const App = () => {
                         </div>
                     </div>
                     <DataTable
-                        onSelectChange={setSelectedRowKeys}
+                        onSelectChange={handleSelectChange}
                     />
                 </div>
             </main>
