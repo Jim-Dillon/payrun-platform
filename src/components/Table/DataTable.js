@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Table } from 'antd';
 import { columns as initialColumns, data } from './PayrunData';
-import Checkbox from '../Checkbox/Checkbox';
+// import Checkbox from '../Checkbox/Checkbox';
 
 const DataTable = ({ onSelectChange }) => {
   const [selectedRowKeys, setSelectedRowKeys] = useState(data.map(item => item.key));
@@ -25,26 +25,36 @@ const DataTable = ({ onSelectChange }) => {
   const columns = [
     {
       title: (
-        <Checkbox
-          checked={selectedRowKeys.length === data.length}
-          onChange={onSelectAllChange}
-        />
+        <label className="checkbox">
+          <input
+            type="checkbox"
+            checked={selectedRowKeys.length === data.length}
+            onChange={onSelectAllChange}
+            className="checkbox-input"
+            aria-label="Checkbox"
+          />
+        </label>
       ),
       dataIndex: 'select',
       key: 'select',
       fixed: 'left',
       width: 0,
       render: (text, record) => (
-        <Checkbox
-          checked={selectedRowKeys.includes(record.key)}
-          onChange={() => {
-            const newSelectedRowKeys = selectedRowKeys.includes(record.key)
-              ? selectedRowKeys.filter(key => key !== record.key)
-              : [...selectedRowKeys, record.key];
-            setSelectedRowKeys(newSelectedRowKeys);
-            onRowSelectionChange(newSelectedRowKeys);
-          }}
-        />
+        <label className="checkbox">
+          <input
+            type="checkbox"
+            checked={selectedRowKeys.includes(record.key)}
+            onChange={() => {
+              const newSelectedRowKeys = selectedRowKeys.includes(record.key)
+                ? selectedRowKeys.filter(key => key !== record.key)
+                : [...selectedRowKeys, record.key];
+              setSelectedRowKeys(newSelectedRowKeys);
+              onRowSelectionChange(newSelectedRowKeys);
+            }}
+            className="checkbox-input"
+            aria-label="Checkbox"
+          />
+        </label>
       ),
     },
     ...initialColumns.map(column => 
