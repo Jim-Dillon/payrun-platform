@@ -1,15 +1,19 @@
 @import '../css/foundation.scss';
 
 .avatar {
+    align-items: center;
     background-color: $avatar;
     border: 2px solid $avatar;
-    border-radius: 100px;
+    border-radius: 50%;
+    box-sizing: border-box;
     color: white;
+    display: flex;
     font-family: $primary-font;
     font-size: 12px;
     font-weight: bold;
-    // height: 32px;
-    // width: 32px;
+    height: 32px;
+    justify-content: center;
+    width: 32px;
 
     
 
