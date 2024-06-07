@@ -1,57 +1,56 @@
 @import '../css/foundation.scss';
 
 header {
-    background: $header-gradient;
-    width: 100%;
+  background: $header-gradient;
+  width: 100%;
 
-    a {
-        height: 32px;
+  a {
+    height: 32px;
+  }
+
+  p {
+    display: none;
+
+    @media only screen and (min-width: 768px) {
+      @include body-regular__desktop;
+
+      color: white;
+      display: initial;
+      font-family: $primary-font;
+      padding-top: map-get($spacing-scale, 4);
+      margin: 0;
     }
-
-    p {
-        display: none;
-
-        @media only screen and (min-width: 768px) {
-            @include body-regular__desktop;
-
-            color: white;
-            display: initial;
-            font-family: $primary-font;
-            padding-top: map-get($spacing-scale, 4);
-            margin: 0;
-        }
-    }
+  }
 }
 
 .navContainer {
-    display: flex;
-    justify-content: space-between;
-    padding: map-get($spacing-scale, 6)
+  display: flex;
+  justify-content: space-between;
+  padding: map-get($spacing-scale, 6);
 }
 
 .logo {
-
-    &:focus {
-        border: 2px solid white;
-    }
+  &:focus {
+    border: 2px solid white;
+  }
 }
 
 .navRight {
-    display: flex;
-    gap: 1.2rem;
+  display: flex;
+  gap: 1.2rem;
 }
 
 .navProfile {
-    display: flex;
-    gap: map-get($spacing-scale, 5);
+  display: flex;
+  gap: map-get($spacing-scale, 5);
 }
 
 .signOutButton {
-    margin-top: 5px;
+  margin-top: 5px;
 }
 
 .signOutToolTip {
-    background-color: red;
-    color: #fff;
-    border: 1px solid #333;
-  }
+  background-color: red;
+  color: #fff;
+  border: 1px solid #333;
+}

@@ -1,44 +1,42 @@
 @import '../css/foundation.scss';
 
 .button {
-    background-color: #0098FF;
-    border: none;
-    border-radius: $primary-br;
+  background-color: #0098ff;
+  border: none;
+  border-radius: $primary-br;
+  color: white;
+  cursor: pointer;
+  font-family: $primary-font;
+  font-size: 16px;
+  font-weight: 600;
+  padding: map-get($spacing-scale, 4) map-get($spacing-scale, 5);
+
+  &.primary {
+    background-color: #0098ff;
     color: white;
-    cursor: pointer;
-    font-family: $primary-font;
-    font-size: 16px;
-    font-weight: 600;
-    padding: map-get($spacing-scale, 4) map-get($spacing-scale, 5);
-    
-    &.primary {
-      background-color: #0098FF;
-      color: white;
 
-      &:hover {
-        background-color: #0082DA;
-      }
-
-      &:active {
-        background-color: #006CB6;
-      }
-
-      &:focus {
-        border: 1px solid #0082DA;  
-        color: black;
-        background-color: #B1D9FC;
-      }
+    &:hover {
+      background-color: #0082da;
     }
-  
-    &.medium {
-      font-size: 14px;
-      padding: map-get($spacing-scale, 4) map-get($spacing-scale, 5);
+
+    &:active {
+      background-color: #006cb6;
     }
-  
-    &.small {
-      font-size: 12px;
-      padding: map-get($spacing-scale, 4) map-get($spacing-scale, 5);
+
+    &:focus {
+      border: 1px solid #0082da;
+      color: black;
+      background-color: #b1d9fc;
     }
   }
-  
-  
+
+  &.medium {
+    font-size: 14px;
+    padding: map-get($spacing-scale, 4) map-get($spacing-scale, 5);
+  }
+
+  &.small {
+    font-size: 12px;
+    padding: map-get($spacing-scale, 4) map-get($spacing-scale, 5);
+  }
+}

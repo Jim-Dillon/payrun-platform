@@ -1,55 +1,54 @@
 @import '../css/foundation.scss';
 
 nav {
-    background-color: white;
-    box-shadow: 0px 2px 4px #00000020;
-    padding: map-get($spacing-scale, 4) map-get($spacing-scale, 6);
+  background-color: white;
+  box-shadow: 0px 2px 4px #00000020;
+  padding: map-get($spacing-scale, 4) map-get($spacing-scale, 6);
 
-    @media only screen and (min-width: 500px) {
-        padding: map-get($spacing-scale, 6) map-get($spacing-scale, 8);
-    }
+  @media only screen and (min-width: 500px) {
+    padding: map-get($spacing-scale, 6) map-get($spacing-scale, 8);
+  }
 
-    @media only screen and (min-width: 768px) {
-        padding: map-get($spacing-scale, 6) map-get($spacing-scale, 9);
-    }
+  @media only screen and (min-width: 768px) {
+    padding: map-get($spacing-scale, 6) map-get($spacing-scale, 9);
+  }
 }
 
 .sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .stickyNavContainer {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 
-    button {
-        @media only screen and (min-width: 768px) {
-            margin-top: map-get($spacing-scale, 1);
-        }
+  button {
+    @media only screen and (min-width: 768px) {
+      margin-top: map-get($spacing-scale, 1);
     }
+  }
 }
 
 .amountTrackContainer {
-    background-color: #F5F5F5;
-    border-radius: $primary-br;
-    display: flex;
-    gap: map-get($spacing-scale, 4);
-    padding: map-get($spacing-scale, 5);
+  background-color: #f5f5f5;
+  border-radius: $primary-br;
+  display: flex;
+  gap: map-get($spacing-scale, 4);
+  padding: map-get($spacing-scale, 5);
 
+  @media only screen and (min-width: 768px) {
+    padding: map-get($spacing-scale, 6);
+  }
 
-    @media only screen and (min-width: 768px) {
-        padding: map-get($spacing-scale, 6)
+  p {
+    @include subheading-regular__mobile;
+    margin: map-get($spacing-scale, 1);
+
+    &.totalAmount {
+      @include subheading-bold__mobile;
     }
-
-    p {
-        @include subheading-regular__mobile;
-        margin: map-get($spacing-scale, 1);
-
-        &.totalAmount {
-            @include subheading-bold__mobile;
-        }
-    }
+  }
 }

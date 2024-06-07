@@ -1,103 +1,110 @@
 @import '../css/foundation.scss';
 
 .tableSection {
-    background-color: #FAFAFA;
-    padding: map-get($spacing-scale, 1) map-get($spacing-scale, 1) map-get($spacing-scale, 6) map-get($spacing-scale, 6);
+  background-color: #fafafa;
+  padding: map-get($spacing-scale, 1) map-get($spacing-scale, 1)
+    map-get($spacing-scale, 6) map-get($spacing-scale, 6);
 
-    @media only screen and (min-width: 500px) {
-        padding: map-get($spacing-scale, 1) map-get($spacing-scale, 1) map-get($spacing-scale, 8) map-get($spacing-scale, 8);
-    }
+  @media only screen and (min-width: 500px) {
+    padding: map-get($spacing-scale, 1) map-get($spacing-scale, 1)
+      map-get($spacing-scale, 8) map-get($spacing-scale, 8);
+  }
 
-    @media only screen and (min-width: 768px) {
-        padding: map-get($spacing-scale, 1) map-get($spacing-scale, 1) map-get($spacing-scale, 8) map-get($spacing-scale, 9);
-    }
+  @media only screen and (min-width: 768px) {
+    padding: map-get($spacing-scale, 1) map-get($spacing-scale, 1)
+      map-get($spacing-scale, 8) map-get($spacing-scale, 9);
+  }
 
-    @media only screen and (min-width: 1350px) {
-        padding: map-get($spacing-scale, 1) map-get($spacing-scale, 9) map-get($spacing-scale, 9);
-    }
+  @media only screen and (min-width: 1350px) {
+    padding: map-get($spacing-scale, 1) map-get($spacing-scale, 9)
+      map-get($spacing-scale, 9);
+  }
 }
 
 .invoiceTotalContainer {
-    display: flex;
-    justify-content: space-between;
-    padding: map-get($spacing-scale, 7) map-get($spacing-scale, 6) map-get($spacing-scale, 6) map-get($spacing-scale, 1);
-   
+  display: flex;
+  justify-content: space-between;
+  padding: map-get($spacing-scale, 7) map-get($spacing-scale, 6)
+    map-get($spacing-scale, 6) map-get($spacing-scale, 1);
 
-    svg, p {
-        @media only screen and (min-width: 1350px) {
-            display: none;
-        }
+  svg,
+  p {
+    @media only screen and (min-width: 1350px) {
+      display: none;
     }
+  }
 
-    @media only screen and (min-width: 500px) {
-        padding: map-get($spacing-scale, 8) map-get($spacing-scale, 8) map-get($spacing-scale, 6) map-get($spacing-scale, 1);
-    }
+  @media only screen and (min-width: 500px) {
+    padding: map-get($spacing-scale, 8) map-get($spacing-scale, 8)
+      map-get($spacing-scale, 6) map-get($spacing-scale, 1);
+  }
 
-    @media only screen and (min-width: 768px) {
-        padding: map-get($spacing-scale, 8) map-get($spacing-scale, 8) map-get($spacing-scale, 6) map-get($spacing-scale, 1);
-    }
+  @media only screen and (min-width: 768px) {
+    padding: map-get($spacing-scale, 8) map-get($spacing-scale, 8)
+      map-get($spacing-scale, 6) map-get($spacing-scale, 1);
+  }
 }
 
 .invoiceTotal {
-    @include subheading-bold__mobile;
+  @include subheading-bold__mobile;
 
-    color: $primary-text;
+  color: $primary-text;
 }
 
 .invoiceTotalRight {
-    color: #787373;
-    display: flex;
-    gap: map-get($spacing-scale, 6);
+  color: #787373;
+  display: flex;
+  gap: map-get($spacing-scale, 6);
 
-    p {
-        @include fineprint;
-        margin: map-get($spacing-scale, 1);
+  p {
+    @include fineprint;
+    margin: map-get($spacing-scale, 1);
 
-        @media only screen and (min-width: 500px) {
-            @include body-regular__mobile
-        }
+    @media only screen and (min-width: 500px) {
+      @include body-regular__mobile;
     }
+  }
 
-    svg {
-        @media only screen and (min-width: 500px) {
-            margin-top: 2px
-        }
+  svg {
+    @media only screen and (min-width: 500px) {
+      margin-top: 2px;
     }
+  }
 }
 
-
 table {
-    td, th {
-        color: $primary-text !important;
-    }
+  td,
+  th {
+    color: $primary-text !important;
+  }
 }
 
 thead tr th {
-    background-color: white !important;
+  background-color: white !important;
 }
 
 .ant-pagination {
+  margin-right: map-get($spacing-scale, 6) !important;
+
+  @media only screen and (min-width: 500px) {
     margin-right: map-get($spacing-scale, 6) !important;
+    margin-top: map-get($spacing-scale, 7) !important;
+  }
 
-    @media only screen and (min-width: 500px) {
-        margin-right: map-get($spacing-scale, 6) !important;
-        margin-top: map-get($spacing-scale, 7) !important;
-    }
-
-    @media only screen and (min-width: 768px) {
-        margin-right: map-get($spacing-scale, 9) !important;
-        margin-top: map-get($spacing-scale, 8) !important;
-    }
+  @media only screen and (min-width: 768px) {
+    margin-right: map-get($spacing-scale, 9) !important;
+    margin-top: map-get($spacing-scale, 8) !important;
+  }
 }
 
 .ant-table-cell-fix-left-last {
-    padding-left: map-get($spacing-scale, 1) !important;
+  padding-left: map-get($spacing-scale, 1) !important;
 }
 
 .ant-pagination-item-active {
-    border-color: $primary-text !important;
+  border-color: $primary-text !important;
 }
 
 .ant-pagination-item a {
-    color: $primary-text !important;
+  color: $primary-text !important;
 }

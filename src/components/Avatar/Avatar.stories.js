@@ -2,12 +2,12 @@ import React from 'react';
 import Avatar from './Avatar';
 
 export default {
-    title: 'Avatar',
-    component: Avatar,
-    argTypes: {
-      onClick: { action: 'clicked' },
-    },
-  };
+  title: 'Avatar',
+  component: Avatar,
+  argTypes: {
+    onClick: { action: 'clicked' },
+  },
+};
 
 const Template = (args) => <Avatar {...args} />;
 

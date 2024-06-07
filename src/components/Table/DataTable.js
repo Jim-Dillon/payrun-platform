@@ -3,7 +3,9 @@ import { Table } from 'antd';
 import { columns, data } from './PayrunData';
 
 const DataTable = ({ onSelectChange }) => {
-  const [selectedRowKeys, setSelectedRowKeys] = useState(data.map(item => item.key));
+  const [selectedRowKeys, setSelectedRowKeys] = useState(
+    data.map((item) => item.key)
+  );
 
   useEffect(() => {
     onSelectChange(selectedRowKeys);
@@ -15,7 +17,7 @@ const DataTable = ({ onSelectChange }) => {
   };
 
   const onSelectAllChange = (e) => {
-    const keys = e.target.checked ? data.map(item => item.key) : [];
+    const keys = e.target.checked ? data.map((item) => item.key) : [];
     setSelectedRowKeys(keys);
     onSelectChange(keys);
   };
@@ -43,7 +45,7 @@ const DataTable = ({ onSelectChange }) => {
             checked={selectedRowKeys.includes(record.key)}
             onChange={() => {
               const newSelectedRowKeys = selectedRowKeys.includes(record.key)
-                ? selectedRowKeys.filter(key => key !== record.key)
+                ? selectedRowKeys.filter((key) => key !== record.key)
                 : [...selectedRowKeys, record.key];
               setSelectedRowKeys(newSelectedRowKeys);
               onRowSelectionChange(newSelectedRowKeys, []);
@@ -53,7 +55,7 @@ const DataTable = ({ onSelectChange }) => {
         </label>
       ),
     },
-    ...columns
+    ...columns,
   ];
 
   return (

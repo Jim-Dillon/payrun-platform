@@ -1,9 +1,9 @@
 body {
-    margin: 0;
+  margin: 0;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 // HEADING STYLES
@@ -11,127 +11,127 @@ body {
 // Desktop
 
 @mixin heading-regular__desktop {
-    font-family: $primary-font;
-    font-size: 24px;
-    line-height: 33.6px;
+  font-family: $primary-font;
+  font-size: 24px;
+  line-height: 33.6px;
 }
 
 @mixin heading-bold__desktop {
-    font-family: $primary-font;
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 33.6px;
+  font-family: $primary-font;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 33.6px;
 }
 
 @mixin subheading-regular__desktop {
-    font-family: $primary-font;
-    font-size: 20px;
-    line-height: 28px;
+  font-family: $primary-font;
+  font-size: 20px;
+  line-height: 28px;
 }
 
 @mixin subheading-bold__desktop {
-    font-family: $primary-font;
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 28px;
+  font-family: $primary-font;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
 }
 
 @mixin body-regular__desktop {
-    font-family: $primary-font;
-    font-size: 14px;
-    line-height: 19.6px;
+  font-family: $primary-font;
+  font-size: 14px;
+  line-height: 19.6px;
 }
 
 @mixin body-bold__desktop {
-    font-family: $primary-font;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 19.6px;
+  font-family: $primary-font;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 19.6px;
 }
 
 // Mobile
 
 @mixin heading-regular__mobile {
-    font-family: $primary-font;
-    font-size: 20px;
-    line-height: 28px;
+  font-family: $primary-font;
+  font-size: 20px;
+  line-height: 28px;
 }
 
 @mixin heading-bold__mobile {
-    font-family: $primary-font;
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 28px;
+  font-family: $primary-font;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
 }
 
 @mixin subheading-regular__mobile {
-    font-family: $primary-font;
-    font-size: 16px;
-    line-height: 22px;
+  font-family: $primary-font;
+  font-size: 16px;
+  line-height: 22px;
 }
 
 @mixin subheading-bold__mobile {
-    font-family: $primary-font;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 22px;
+  font-family: $primary-font;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
 }
 
 @mixin body-regular__mobile {
-    font-family: $primary-font;
-    font-size: 14px;
-    line-height: 19.6px;
+  font-family: $primary-font;
+  font-size: 14px;
+  line-height: 19.6px;
 }
 
 @mixin body-bold__mobile {
-    font-family: $primary-font;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 19.6px;
+  font-family: $primary-font;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 19.6px;
 }
 
 @mixin fineprint {
-    font-family: $primary-font;
-    font-size: 12px;
-    line-height: 16.8px;
+  font-family: $primary-font;
+  font-size: 12px;
+  line-height: 16.8px;
 }
-
 
 // FONT FAMILY
 
-$primary-font: "Barlow", sans-serif;
-
+$primary-font: 'Barlow', sans-serif;
 
 // COLOURS
 
 $primary-text: #002749;
 
-$header-gradient: linear-gradient(to bottom left, rgba(97, 21, 166, 1), rgba(3, 3, 18, 1));
+$header-gradient: linear-gradient(
+  to bottom left,
+  rgba(97, 21, 166, 1),
+  rgba(3, 3, 18, 1)
+);
 
-$button-primary: #0098FF;
-$button-hover: #0082DA;
-$button-active: #006CB6;
-$button-focus: #B1D9FC;
+$button-primary: #0098ff;
+$button-hover: #0082da;
+$button-active: #006cb6;
+$button-focus: #b1d9fc;
 
-$avatar: #EB3FC7;
-
+$avatar: #eb3fc7;
 
 // BORDER RADIUS
 
 $primary-br: 4px;
 
-
 // SPACING SCALE
 
 $spacing-scale: (
-    1: 0rem,
-    2: 0.125rem,
-    3: 0.25rem, 
-    4: 0.5rem, 
-    5: 0.75rem, 
-    6: 1rem, 
-    7: 1.5rem,
-    8: 2rem,
-    9: 3rem,
-    10: 4rem
-    )
+  1: 0rem,
+  2: 0.125rem,
+  3: 0.25rem,
+  4: 0.5rem,
+  5: 0.75rem,
+  6: 1rem,
+  7: 1.5rem,
+  8: 2rem,
+  9: 3rem,
+  10: 4rem,
+);

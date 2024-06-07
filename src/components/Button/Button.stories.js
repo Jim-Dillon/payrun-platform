@@ -2,12 +2,12 @@ import React from 'react';
 import Button from './Button';
 
 export default {
-    title: 'Button',
-    component: Button,
-    argTypes: {
-      onClick: { action: 'clicked' },
-    },
-  };
+  title: 'Button',
+  component: Button,
+  argTypes: {
+    onClick: { action: 'clicked' },
+  },
+};
 
 const Template = (args) => <Button {...args} />;
 
@@ -48,4 +48,3 @@ Small.args = {
   variant: 'primary',
   size: 'small',
 };
-

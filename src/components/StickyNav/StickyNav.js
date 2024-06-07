@@ -1,13 +1,13 @@
-import { useState, useEffect, useRef } from 'react'
-import Button from '../Button/Button'
-import './StickyNav.scss'
+import { useState, useEffect, useRef } from 'react';
+import Button from '../Button/Button';
+import './StickyNav.scss';
 
 const StickyNav = ({ selectedCount, selectedAmount }) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const [stickyOffset, setStickyOffset] = useState(0);
-  const navRef = useRef(null)
+  const navRef = useRef(null);
   const placeholderRef = useRef(null);
-  
+
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
@@ -41,24 +41,31 @@ const StickyNav = ({ selectedCount, selectedAmount }) => {
 
   return (
     <>
-      <div ref={placeholderRef} style={{ display: 'none', height: '50px' }}></div>
+      <div
+        ref={placeholderRef}
+        style={{ display: 'none', height: '50px' }}
+      ></div>
       <nav ref={navRef}>
-          <div className="stickyNavContainer">
-              <div className="amountTrackContainer">
-                  <p>Total Amount:</p>
-                  <p className='totalAmount'>£{selectedAmount.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>
-              </div>
-              <Button
-                  label={`Approve (${selectedCount})`}
-                  variant='primary'
-                  size={isMobile ? 'small' : ''}
-              >
-              </Button>
+        <div className="stickyNavContainer">
+          <div className="amountTrackContainer">
+            <p>Total Amount:</p>
+            <p className="totalAmount">
+              £
+              {selectedAmount.toLocaleString(undefined, {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2,
+              })}
+            </p>
           </div>
+          <Button
+            label={`Approve (${selectedCount})`}
+            variant="primary"
+            size={isMobile ? 'small' : ''}
+          ></Button>
+        </div>
       </nav>
     </>
-    
-  )
-}
+  );
+};
 
-export default StickyNav
+export default StickyNav;
