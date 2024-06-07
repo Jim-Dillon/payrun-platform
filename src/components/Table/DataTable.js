@@ -10,7 +10,7 @@ const DataTable = ({ onSelectChange }) => {
     onSelectChange(selectedRowKeys);
   }, [selectedRowKeys, onSelectChange]);
 
-  const onRowSelectionChange = (selectedKeys, selectedRows) => {
+  const onRowSelectionChange = (selectedKeys) => {
     setSelectedRowKeys(selectedKeys);
     onSelectChange(selectedKeys);
   };
