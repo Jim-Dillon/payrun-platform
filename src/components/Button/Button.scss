@@ -3,7 +3,7 @@
 .button {
     background-color: #0098FF;
     border: none;
-    border-radius: 4px;
+    border-radius: $primary-br;
     color: white;
     cursor: pointer;
     font-family: $primary-font;
