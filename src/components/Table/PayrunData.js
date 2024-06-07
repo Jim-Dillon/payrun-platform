@@ -73,7 +73,7 @@ export const data = [
     },
     {
         key: '9',
-        supplierName: 'QuickBuild Co',
+        supplierName: 'QuickBuild Co.',
         invoiceRef: 'INV009',
         supplierRef: 'SR007',
         creationDate: '2024-05-09',
