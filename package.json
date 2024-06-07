@@ -3,8 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "antd": "^5.18.0",
     "react": "^18.3.1",
@@ -52,6 +50,8 @@
     "@storybook/react": "^8.1.5",
     "@storybook/react-webpack5": "^8.1.5",
     "@storybook/test": "^8.1.5",
+    "@testing-library/jest-dom": "^6.4.5",
+    "@testing-library/react": "^16.0.0",
     "chromatic": "^11.5.3",
     "eslint-plugin-storybook": "^0.8.0",
     "prop-types": "^15.8.1",
