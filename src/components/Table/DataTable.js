@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
-import { Table, Modal } from 'antd';
+import { Table, Modal } from 'antd'; // Import Modal from Ant Design
 import { columns as initialColumns, data } from './PayrunData';
 
 const DataTable = ({ onSelectChange }) => {
   const [selectedRowKeys, setSelectedRowKeys] = useState(data.map(item => item.key));
-  const [selectedRow, setSelectedRow] = useState(null);
+  const [selectedRow, setSelectedRow] = useState(null); // Track selected row
 
   useEffect(() => {
     // Notify parent component about initial selection
@@ -14,7 +14,7 @@ const DataTable = ({ onSelectChange }) => {
   const onRowSelectionChange = (selectedKeys, selectedRows) => {
     setSelectedRowKeys(selectedKeys);
     onSelectChange(selectedKeys);
-    setSelectedRow(selectedRows.length > 0 ? selectedRows[0] : null);
+    setSelectedRow(selectedRows.length > 0 ? selectedRows[0] : null); // Set selected row
   };
 
   const onSelectAllChange = (e) => {
@@ -25,7 +25,6 @@ const DataTable = ({ onSelectChange }) => {
 
   const onCheckboxClick = (record) => {
     setSelectedRow(record); // Set selected row
-    console.log(record);
     // Display popup message
     Modal.info({
       title: 'Selected Row',
@@ -40,7 +39,6 @@ const DataTable = ({ onSelectChange }) => {
     });
   };
 
-
   const columns = [
     {
       title: (
@@ -49,7 +47,7 @@ const DataTable = ({ onSelectChange }) => {
             type="checkbox"
             checked={selectedRowKeys.length === data.length}
             onChange={onSelectAllChange}
-            aria-label="Checkbox"
+            aria-label="Checkbox 1"
           />
         </label>
       ),
@@ -63,29 +61,24 @@ const DataTable = ({ onSelectChange }) => {
             type="checkbox"
             checked={selectedRowKeys.includes(record.key)}
             onChange={() => {
-              // No need to handle onChange for checkboxes, as we handle the click event directly
+              const newSelectedRowKeys = selectedRowKeys.includes(record.key)
+                ? selectedRowKeys.filter(key => key !== record.key)
+                : [...selectedRowKeys, record.key];
+              setSelectedRowKeys(newSelectedRowKeys);
+              onRowSelectionChange(newSelectedRowKeys, []);
             }}
-            onClick={(e) => {
-              e.stopPropagation(); // Prevent row selection event from firing
-
-              // Find the corresponding record in the data array
-              const selectedRecord = data.find(item => item.key === record.key);
-
-              // Set selected row and call onCheckboxClick with the record
-              setSelectedRow(selectedRecord); 
-              onCheckboxClick(selectedRecord);
-            }}
+            onClick={(e) => e.stopPropagation()} // Prevent row selection event from firing
             aria-label="Checkbox"
           />
         </label>
       ),
     },
-    ...initialColumns.map(column => 
-      column.dataIndex === 'amount' 
-        ? { 
-            ...column, 
-            render: (text) => `£${parseFloat(text).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}` 
-          } 
+    ...initialColumns.map(column =>
+      column.dataIndex === 'amount'
+        ? {
+          ...column,
+          render: (text) => `£${parseFloat(text).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`
+        }
         : column
     ),
   ];
@@ -112,7 +105,8 @@ const DataTable = ({ onSelectChange }) => {
           onCancel={() => setSelectedRow(null)}
           onOk={() => setSelectedRow(null)}
         >
-          <p>Do you want to exclude all invoices from {selectedRow.supplierName}</p>
+          <p>Supplier Name: {selectedRow.supplierName}</p>
+          <p>Invoice Ref #: {selectedRow.invoiceRef}</p>
           {/* Add other fields you want to display */}
         </Modal>
       )}
