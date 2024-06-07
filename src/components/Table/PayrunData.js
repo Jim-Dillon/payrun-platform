@@ -1,56 +1,4 @@
-export const columns = [
-    {
-      title: 'Supplier Name',
-      dataIndex: 'supplierName',
-      key: 'supplierName',
-      fixed: 'left',
-      width: 80,
-      status: "pending",
-      excluded: false
-    },
-    {
-      title: 'Invoice Ref #',
-      dataIndex: 'invoiceRef',
-      key: 'invoiceRef',
-      width: 100,
-      status: "pending",
-      excluded: false
-    },
-    {
-      title: 'Supplier Ref #',
-      dataIndex: 'supplierRef',
-      key: 'supplierRef',
-      width: 100,
-      status: "pending",
-      excluded: false
-    },
-    {
-      title: 'Creation Date',
-      dataIndex: 'creationDate',
-      key: 'creationDate',
-      width: 130,
-      status: "pending",
-      excluded: false
-    },
-    {
-      title: 'Due Date',
-      dataIndex: 'dueDate',
-      key: 'dueDate',
-      width: 130,
-      status: "pending",
-      excluded: false
-    },
-    {
-      title: 'Amount',
-      dataIndex: 'amount',
-      key: 'amount',
-      width: 80,
-      status: "pending",
-      excluded: false
-    },
-  ];
-  
-  export const data = [
+export const data = [
     {
       key: '1',
       supplierName: 'Acme Supplies',
@@ -322,4 +270,68 @@ export const columns = [
         amount: '28000.00',
     },
   ];
+
+export const supplierNames = [...new Set(data.map(item => item.supplierName))].map(name => ({
+    text: name,
+    value: name
+  }));
+
+export const columns = [
+    {
+      title: 'Supplier Name',
+      dataIndex: 'supplierName',
+      key: 'supplierName',
+      fixed: 'left',
+      width: 80,
+      status: "pending",
+      excluded: false,
+      filters: supplierNames,
+      onFilter: (value, record) => record.supplierName.includes(value),
+    },
+    {
+      title: 'Invoice Ref #',
+      dataIndex: 'invoiceRef',
+      key: 'invoiceRef',
+      width: 100,
+      status: "pending",
+      excluded: false
+    },
+    {
+      title: 'Supplier Ref #',
+      dataIndex: 'supplierRef',
+      key: 'supplierRef',
+      width: 100,
+      status: "pending",
+      excluded: false
+    },
+    {
+      title: 'Creation Date',
+      dataIndex: 'creationDate',
+      key: 'creationDate',
+      width: 130,
+      status: "pending",
+      excluded: false
+    },
+    {
+      title: 'Due Date',
+      dataIndex: 'dueDate',
+      key: 'dueDate',
+      width: 130,
+      status: "pending",
+      excluded: false
+    },
+    {
+      title: 'Amount',
+      dataIndex: 'amount',
+      key: 'amount',
+      width: 80,
+      status: "pending",
+      excluded: false,
+      render: (text) => `£${parseFloat(text).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`
+    },
+  ];
+
+  
+  
+  
 

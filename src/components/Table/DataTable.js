@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Table } from 'antd';
-import { columns as initialColumns, data } from './PayrunData';
+import { columns, data } from './PayrunData';
 
 const DataTable = ({ onSelectChange }) => {
   const [selectedRowKeys, setSelectedRowKeys] = useState(data.map(item => item.key));
@@ -16,13 +16,12 @@ const DataTable = ({ onSelectChange }) => {
   };
 
   const onSelectAllChange = (e) => {
-    alert('Checkbox clicked!');
     const keys = e.target.checked ? data.map(item => item.key) : [];
     setSelectedRowKeys(keys);
     onSelectChange(keys);
   };
 
-  const columns = [
+  const columnsWithCheckbox = [
     {
       title: (
         <label className="checkbox">
@@ -57,20 +56,21 @@ const DataTable = ({ onSelectChange }) => {
         </label>
       ),
     },
-    ...initialColumns.map(column =>
-      column.dataIndex === 'amount'
-        ? {
-          ...column,
-          render: (text) => `£${parseFloat(text).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`
-        }
-        : column
-    ),
+    ...columns
+    // ...initialColumns.map(column =>
+    //   column.dataIndex === 'amount'
+    //     ? {
+    //       ...column,
+    //       render: (text) => `£${parseFloat(text).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`
+    //     }
+    //     : column
+    // ),
   ];
 
   return (
     <>
       <Table
-        columns={columns}
+        columns={columnsWithCheckbox}
         dataSource={data}
         scroll={{ x: 1300 }}
         rowSelection={{
