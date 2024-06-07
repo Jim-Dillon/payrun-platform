@@ -14,7 +14,7 @@ A task to build a platform for accountants to easily manage weekly payruns (list
 - [Deployed Website](https://payrun-platform.vercel.app/)
 
 ## How I tackled it...
-1. Built a use case from the brief, focusing on the user's pain points and what a successful platform looks like to them.  
+1. Built a use case from the brief, focusing on the user's goals and what a successful platform looks like to them.  
 2. Wireframed the page by hand and in Figma.
 2. Created a mini design system to apply to components built. 
 3. Mocked up a high fidelity design for multiple breakpoints
