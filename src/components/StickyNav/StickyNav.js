@@ -6,6 +6,7 @@ const StickyNav = ({ selectedCount, selectedAmount }) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const [stickyOffset, setStickyOffset] = useState(0);
   const navRef = useRef(null)
+  const placeholderRef = useRef(null);
   
   useEffect(() => {
     const handleResize = () => {
@@ -24,8 +25,10 @@ const StickyNav = ({ selectedCount, selectedAmount }) => {
     const handleScroll = () => {
       if (window.scrollY >= stickyOffset) {
         navRef.current.classList.add('sticky');
+        placeholderRef.current.style.display = 'block';
       } else {
         navRef.current.classList.remove('sticky');
+        placeholderRef.current.style.display = 'none';
       }
     };
 
@@ -38,6 +41,7 @@ const StickyNav = ({ selectedCount, selectedAmount }) => {
 
   return (
     <>
+      <div ref={placeholderRef} style={{ display: 'none', height: '50px' }}></div>
       <nav ref={navRef}>
           <div className="stickyNavContainer">
               <div className="amountTrackContainer">
