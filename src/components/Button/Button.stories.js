@@ -20,19 +20,19 @@ Primary.args = {
 export const Hover = Template.bind({});
 Hover.args = {
   label: 'Hover Button',
-  variant: 'hover',
+  variant: 'primary',
 };
 
 export const Active = Template.bind({});
 Active.args = {
   label: 'Active Button',
-  variant: 'active',
+  variant: 'primary',
 };
 
 export const Focus = Template.bind({});
 Focus.args = {
   label: 'Focus Button',
-  variant: 'focus',
+  variant: 'primary',
 };
 
 export const Medium = Template.bind({});

@@ -30,20 +30,6 @@
       }
     }
   
-    &.hover:hover {
-      background-color: #0082DA;
-    }
-  
-    &.active:active {
-      background-color: #006CB6;
-    }
-  
-    &.focus:focus {
-      border: 1px solid #0082DA;  
-      color: black;
-      background-color: #B1D9FC;
-    }
-  
     &.medium {
       font-size: 14px;
       padding: map-get($spacing-scale, 4) map-get($spacing-scale, 5);
