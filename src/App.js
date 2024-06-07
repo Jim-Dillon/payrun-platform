@@ -13,7 +13,6 @@ const App = () => {
     const [totalAmount, setTotalAmount] = useState(0);
 
     useEffect(() => {
-        // Initial calculation of total amount
         setTotalAmount(calculateTotalAmount(selectedRowKeys));
       }, []);
 

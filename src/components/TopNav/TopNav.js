@@ -6,8 +6,7 @@ import { Tooltip } from 'antd';
 
 
 const TopNav = () => {
-
-    const toolTipColour = '#535151'
+  const toolTipColour = '#535151'
 
   return (
     <header>
@@ -19,7 +18,7 @@ const TopNav = () => {
                 <div className="navProfile">
                     <Avatar 
                         label="TR"  
-                        onClick={() => console.log('Avatar clicked')} 
+                        onClick={() => console.log('Profile clicked')} 
                     />
                     <p>Hi Tony</p>
                 </div>

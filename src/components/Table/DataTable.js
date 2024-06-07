@@ -6,7 +6,6 @@ const DataTable = ({ onSelectChange }) => {
   const [selectedRowKeys, setSelectedRowKeys] = useState(data.map(item => item.key));
 
   useEffect(() => {
-    // Notify parent component about initial selection
     onSelectChange(selectedRowKeys);
   }, [selectedRowKeys, onSelectChange]);
 
@@ -48,23 +47,13 @@ const DataTable = ({ onSelectChange }) => {
                 : [...selectedRowKeys, record.key];
               setSelectedRowKeys(newSelectedRowKeys);
               onRowSelectionChange(newSelectedRowKeys, []);
-              console.log('Hi there');
             }}
-            onClick={(e) => e.stopPropagation()} // Prevent row selection event from firing
             aria-label="Checkbox 1"
           />
         </label>
       ),
     },
     ...columns
-    // ...initialColumns.map(column =>
-    //   column.dataIndex === 'amount'
-    //     ? {
-    //       ...column,
-    //       render: (text) => `£${parseFloat(text).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`
-    //     }
-    //     : column
-    // ),
   ];
 
   return (
