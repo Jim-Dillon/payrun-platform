@@ -16,11 +16,11 @@ A task to build a platform for accountants to easily manage weekly payruns (list
 ## How I tackled it...
 1. Built a use case from the brief, focusing on the user's goals and what a successful platform looks like to them.  
 2. Wireframed the page by hand and in Figma.
-2. Created a mini design system to apply to components built. 
-3. Mocked up a high fidelity design for multiple breakpoints
-4. Built components in Storybook and enabled visual testing. 
-5. Built app with React, using a mix of custom components and customised ones from a library (AntD). 
-6. Works across multiple breakpoints (mobile to large desktop).  
+3. Created a mini design system to apply to components built. 
+4. Mocked up a high fidelity design for multiple breakpoints.
+5. Built components in Storybook and enabled visual testing. 
+6. Built app with React, using a mix of custom components and customised ones from a library (AntD). 
+7. Works across multiple breakpoints (mobile to large desktop).  
 
 
 ## If I had more time...
