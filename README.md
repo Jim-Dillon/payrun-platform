@@ -25,7 +25,7 @@ A task to build a platform for accountants to easily manage weekly payruns (list
 
 ## If I had more time...
 1. If I knew of any, I would have asked some accountants for feedback on what they'd want from this platform.
-2. Write some unit tests for components, their various states and function executions. 
+2. Write more unit tests for components, their various states and function executions. 
 3. Ideally I would've built all components in Storybook and pulled from there. 
 4. I created an alert icon which I wanted to be visible on rows where a supplier sent multiple invoices of the same amount. With more time I would've slightly altered the data to simulate this case and added a tooltip with a warning for potential duplicate payments.
 5. Add notifications for success/error state (customised with something like Toastify).
