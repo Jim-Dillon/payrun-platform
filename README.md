@@ -30,4 +30,5 @@ A task to build a platform for accountants to easily manage weekly payruns (list
 4. I created an alert icon which I wanted to be visible on rows where a supplier sent multiple invoices of the same amount. With more time I would've slightly altered the data to simulate this case and added a tooltip with a warning for potential duplicate payments.
 5. Add notifications for success/error state (customised with something like Toastify).
 6. Use LocalStorage so my state survives through accidental browser refreshes.  
+7. Use a state management system for all my specified state, like Zustand
       
