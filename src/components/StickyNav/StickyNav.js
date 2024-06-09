@@ -41,10 +41,7 @@ const StickyNav = ({ selectedCount, selectedAmount }) => {
 
   return (
     <>
-      <div
-        ref={placeholderRef}
-        style={{ display: 'none', height: '50px' }}
-      ></div>
+      <div ref={placeholderRef} className="navPlaceholder"></div>
       <nav ref={navRef}>
         <div className="stickyNavContainer">
           <div className="amountTrackContainer">
