@@ -48,7 +48,7 @@ const DataTable = ({ onSelectChange }) => {
                 ? selectedRowKeys.filter((key) => key !== record.key)
                 : [...selectedRowKeys, record.key];
               setSelectedRowKeys(newSelectedRowKeys);
-              onRowSelectionChange(newSelectedRowKeys, []);
+              onRowSelectionChange(newSelectedRowKeys);
             }}
             aria-label="Checkbox 1"
           />
